@@ -1,0 +1,18 @@
+.custom-button-container{
+    background: rgb(115,111,168);
+    background: linear-gradient(42deg, rgba(115,111,168,1) 0%, rgba(9,94,121,1) 100%);
+    padding:1rem 2rem;
+    border-radius:2.5rem;
+    color:white;
+    display: inline-block;
+    margin-top:2rem;
+    cursor: pointer;
+    &:hover{
+        background: rgb(26,23,62);
+        background: linear-gradient(42deg, rgba(26,23,62,1) 0%, rgba(13,122,157,1) 100%);
+    }
+    span{
+        letter-spacing: 2px;
+        font-size:2rem;
+    }
+}

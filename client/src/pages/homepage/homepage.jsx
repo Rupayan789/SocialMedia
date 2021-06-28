@@ -4,7 +4,7 @@ import './styles.scss'
 import { Toolbar , Typography , IconButton } from '@material-ui/core';
 import  MoreIcon from '@material-ui/icons/MoreVert'
 import {  makeStyles ,createMuiTheme ,ThemeProvider } from '@material-ui/core/styles';
-
+import Landing from './landing/landing'
 const useStyles=makeStyles((theme)=>({
     menuItem:{
         [theme.breakpoints.up("md")]:{
@@ -15,7 +15,8 @@ const useStyles=makeStyles((theme)=>({
                 color:"#f7217d",
                 backgroundColor:"#fff",
                 boxShadow:"-1px 4px 17px 2px rgba(3,3,3,0.43)",
-                borderRadius:"15px"
+                borderRadius:"40px",
+                cursor:"pointer"
             }
         },
         [theme.breakpoints.down("md")]:{
@@ -29,7 +30,7 @@ const useStyles=makeStyles((theme)=>({
         }
     },
     mobileView:{
-        [theme.breakpoints.up('sm')]:{
+        [theme.breakpoints.up('md')]:{
             display:"none"
         }
     }
@@ -42,7 +43,7 @@ const Homepage = () => {
 
     const theme=createMuiTheme({
         typography:{
-            fontFamily:"Roboto, sans-serif",
+            fontFamily:"Open Sans, sans-serif",
         },
         palette:{
             primary:{
@@ -56,7 +57,7 @@ const Homepage = () => {
                 <ThemeProvider theme={theme}>
 
                 
-                <AppBar className="appbar-container">
+                <AppBar className="appbar-container" position="static">
                     <Toolbar className="toolbar-container">
                         <div className="menu-logo">
                             <Typography variant="h4" color="primary">
@@ -93,6 +94,7 @@ const Homepage = () => {
                 </AppBar>
                 </ThemeProvider>
             </div>
+            <Landing/>
         </div>
     )
 }
