@@ -1,26 +1,39 @@
 import React from 'react'
+
+import Header from '../header/header'
 import CustomButton from '../../../component/button/button'
-import './styles.scss'
+
 const Landing = () => {
+   
     return (
         <div className="landing-container">
+            <Header/>
             <div className="landing">
-                <div className="landing-text">
-                    <div>Why Reckon?</div>
-                    
-                    <div>
-                        We build real<br/>connections...
+                <div className="landing-left">
+                    <div className="landing-left-image">
+                        <img src="../../../assets/5632249.jpg" alt=""/>
                     </div>
-                    <div>
-                        Don't wait any more <br/>
-                        Register to our communtiy and enjoy with others
-                    </div>
-                    <CustomButton>
-                        Get Started
-                    </CustomButton>
                 </div>
-                <div className="landing-image"/>
+                <div className="landing-right">
+                    <div className="landing-text">
+                        <div className="landing-right-header">Make new connections here</div>
+                        <div className="landing-right-punchline">
+                            Time to be social,go social
+                        </div>
+                        
+                        <div className="landing-right-description">
+                            Get in touch with your friends,relatives and business cooperators in a matter of seconds.
+                            Surround yourself with people who not just support you and stay with you, but inform your thinking about ways to WOW your online presence
+                        </div>
+                        <div className="landing-right-button-group">
+                            <CustomButton purple>Get Started</CustomButton>
+                            <CustomButton>Login</CustomButton>
+                            
+                        </div>
+                    </div>
+                </div>
             </div>
+            
         </div>
     )
 }

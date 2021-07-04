@@ -1,8 +1,8 @@
 import React from 'react'
-import './styles.scss'
-const CustomButton = ({children}) => {
+
+const CustomButton = ({children,purple}) => {
     return (
-        <div className="custom-button-container">
+        <div className="custom-button-container" style={{backgroundColor:`${purple?"#A239EA":"#fff"}`,color:`${purple?"#fff":"#A239EA"}`}}>
             <span>{children}</span>
         </div>
     )

@@ -1,6 +1,6 @@
+import "./scss/main.scss"
+import  Homepage from "./pages/homepage/homepage.jsx"
 
-import './App.css';
-import Homepage from './pages/homepage/homepage';
 function App() {
   return (
     <div className="App">

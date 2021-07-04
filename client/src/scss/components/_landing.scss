@@ -1,0 +1,67 @@
+.landing-container{
+    padding:0;
+
+    
+    top:0;
+    @include for-phone-only{
+        padding:1rem;
+    }
+ 
+    .landing{
+        @include grid;
+        grid-template-columns: 1fr 1fr;;
+        @include for-desktop-down{
+            grid-template-columns: auto;
+        }
+        &-left{
+            column-span: 1fr;
+            background: #C33764;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right,#A239EA, #1D2671);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #1D2671, #A239EA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            &-image{
+                z-index: 999;
+                background-image: url("../../assets/phone.png");
+                background-size: cover;
+                height:100vh;
+                width:100%;
+                
+            }
+            @include for-desktop-down{
+                display: none;
+            }
+        }
+        &-right{
+            column-span: 1fr;;
+            padding:12rem 0 2rem 10rem;
+            &-header{
+                font-size:$medium - 10px;
+                margin-bottom:1rem;
+            }
+            &-punchline{
+                font-size: $large;
+                margin-bottom: 1rem;
+                font-weight: 700;
+            }   
+            &-description{
+                font-size: $semi-medium - 10px;
+                line-height: $semi-medium;
+                @include for-tablet-landscape-up{
+                    width:80%;
+                }
+            }
+            &-button-group{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                margin-top:2rem;
+                *:not(:first-child){
+                    margin-left:2rem;
+                }
+            }
+            @include for-tablet-landscape-down{
+                padding:4rem 0;
+            }
+        }
+
+    }
+}

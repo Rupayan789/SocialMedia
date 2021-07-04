@@ -1,0 +1,48 @@
+.header-container{
+    position: absolute;
+    @include for-tablet-landscape-down{
+        position: sticky;
+    }
+}
+.header{
+    @include flex;
+    // font-family: 'Poppins', sans-serif;
+    width:calc(100vw - 32px);
+    font-size:$semi-medium - 8px;
+    padding:2rem 4rem;
+    @include for-phone-only{
+        padding:1rem 0rem;
+    }
+    ul{
+        @include flex;
+        list-style: none;
+        flex:1;
+        &:first-child{
+            justify-content: flex-start;
+            color:#fff;
+            *:first-child{
+                font-size: $semi-medium;
+            }
+            *:not(:first-child){
+                margin-left:5rem;
+                @include for-phone-only{
+                    display: none;
+                }
+            }
+            @include for-phone-only{
+                color:#000;
+            }
+        }
+        &:last-child{
+            justify-content: flex-end;
+            *:not(:last-child){
+                margin-right:5rem;
+                @include for-phone-only{
+                    margin-right:1rem;
+                }
+            }
+        }
+    }
+    
+    
+}
