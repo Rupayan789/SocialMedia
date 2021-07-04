@@ -1,11 +1,14 @@
 import React from 'react'
 import CustomButton from '../../../component/button/button'
+import { useHistory } from 'react-router'
+const Header = (props) => {
+    const history=useHistory();
+    // console.log(props)
 
-const Header = () => {
     return (
-        <div className="header-container">
+        <div className="header-container" style={{position:`${props.loginSignUp?"static":"absolute"}`}}>
             <div className="header">
-                <ul>
+                <ul style={{color:`${props.loginSignUp?"black":"#fff"}`}}>
                     <li>Social</li>
                     <li>About</li>
                     <li>Features</li>
@@ -13,8 +16,8 @@ const Header = () => {
                     <li>FaQ</li>
                 </ul>
                 <ul>
-                    <li><CustomButton purple>Create Account</CustomButton></li>
-                    <li><CustomButton>Login</CustomButton></li>
+                    <li style={{ display:`${history.location.pathname==="/register"?"none":"static"}` }}><CustomButton purple>Create Account</CustomButton></li>
+                    <li style={{ display:`${history.location.pathname==="/login"?"none":"static"}` }}><CustomButton>Login</CustomButton></li>
                 </ul>
             </div>
             <div></div>
