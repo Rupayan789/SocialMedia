@@ -1,0 +1,66 @@
+.create-post{
+    padding:1rem 2rem;
+    @include for-phone-only{
+        padding:1rem 1rem;
+        border-radius: 0;
+    }
+    background-color: white;
+    border-radius: 0.5rem;
+    &-text{
+        @include flex;
+        justify-content: flex-start;
+        
+        input{
+            margin-left:1rem;
+            border:none;
+            padding:1rem 1rem;
+            width:100%;
+            border-radius: 1rem;
+            background-color: $primary-gray;
+            &::placeholder{
+                color:black
+            }
+            
+            &:focus{
+                outline:none;
+            }
+        }
+        
+    }
+    hr{
+        margin:0.5rem 0;
+        @include for-tablet-landscape-down{
+            margin:0.5rem 0 0 0;
+        }
+        background-color:$border-gray;
+        opacity: 0.2;
+    
+    }
+    &-attachment{
+       ul{
+           list-style: none;
+           @include flex;
+           @include for-phone-only{
+               display: flex;
+               flex-direction: column;
+               align-items: flex-start;
+               justify-content: center;
+           }
+           li{
+               width:100%;
+               @include flex;
+               justify-content: flex-start;
+               & > * + *{
+                   margin-left:0.5rem;
+               }
+               @include for-phone-only{
+                   border-bottom: 1px solid $primary-gray;
+                   
+                   justify-content: flex-start;
+                   padding:0.5rem 0;
+                   
+               }
+           }
+       }
+    }
+}

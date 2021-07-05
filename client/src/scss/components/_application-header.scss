@@ -1,0 +1,86 @@
+.application-header{
+   @include flex;
+
+    padding:1rem 2rem;
+    background-color:$base-color;
+    @include for-tablet-landscape-down{
+        @include grid;
+    }
+    &-logo{
+       
+        flex:3;
+        font-size:$semi-medium;
+        @include for-tablet-landscape-down{
+            display: none;
+            // grid-column: 1/span 3;
+            // grid-row:1;
+        }
+    }
+    &-search{
+      
+        flex:6;
+        position: relative;
+        @include for-tablet-landscape-down{
+            grid-column:1/span 15;
+        }
+        .search-icon{
+            position:absolute;
+            
+            top:25%;
+            left:0.5rem;
+            color:black;
+            opacity: 0.4;
+            
+        }
+        input{
+            padding:1rem 2rem;
+            border:none;
+            border-radius:0.5rem;
+            width:90%;
+            font-size:1rem;
+            &::placeholder{
+                opacity:0.7;
+                font-size:1rem;
+                
+            }
+            &:focus{
+                outline:none;
+            }
+            @include for-tablet-landscape-down{
+                width:100%;
+            }
+        }
+    }
+    &-right{
+
+        flex:4;
+        @include flex;
+        @include for-tablet-landscape-down{
+            padding-top:1.5rem;
+            grid-row:2;
+            grid-column: 1/span 15;
+            
+        }
+        
+        ul{
+            list-style: none;
+            @include flex;
+            &:first-child{
+                li:not(:first-child){
+                    margin-left:1rem;
+                    @include for-tablet-landscape-down{
+                        margin-left:0.5rem;
+                    }
+                }
+            }
+            &:last-child{
+                li:not(:last-child){
+                    margin-right:1rem;
+                    
+                }
+            }
+        }   
+    
+    }
+
+}

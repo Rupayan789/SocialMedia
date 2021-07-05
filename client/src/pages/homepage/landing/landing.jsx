@@ -11,7 +11,7 @@ const Landing = () => {
             <div className="landing">
                 <div className="landing-left">
                     <div className="landing-left-image">
-                        <img src="../../../assets/5632249.jpg" alt=""/>
+                       
                     </div>
                 </div>
                 <div className="landing-right">
