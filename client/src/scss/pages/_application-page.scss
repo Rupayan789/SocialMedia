@@ -30,9 +30,16 @@
     &-right
     {
         flex:4;
-        background-color: black;
+        padding:1rem;
         @include for-tablet-landscape-down{
             display: none;
+        }
+        &-caption{
+            font-size: $semi-medium;
+            background: rgb(162,57,234);
+            background: linear-gradient(22deg, rgba(162,57,234,1) 0%, rgba(13,157,27,1) 100%);
+            padding:1rem;
+            color:#fff;
         }
     }
 }

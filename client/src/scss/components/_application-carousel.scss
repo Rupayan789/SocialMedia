@@ -1,0 +1,22 @@
+.application-carousel{
+    margin-top:2rem;
+    div{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row-gap: 1rem;
+        div{
+            @include flex;
+            flex-direction: column;
+            img{
+                width:10rem;
+                height:10rem;
+                object-fit: cover;
+                
+            }
+            div
+            {
+             
+            }
+        }
+    }
+}

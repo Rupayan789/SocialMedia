@@ -1,0 +1,29 @@
+.profile-preview-card{
+    padding:1rem 3rem;
+    margin-bottom: 1rem;
+    background-color: $primary-gray;
+    border-radius:10px;
+    &-header{
+        @include flex;
+        div:first-child
+        {
+            & > * + *{
+                margin-left:1rem;
+            }
+            @include flex;
+            img{
+                height:3rem;
+                width:3rem;
+                border-radius: 50%;
+            }
+        }
+        
+    }
+    &-body{
+        
+        div{
+            @include flex;
+            margin:1rem 0;
+        }
+    }
+}

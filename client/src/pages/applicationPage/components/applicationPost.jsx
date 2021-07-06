@@ -36,6 +36,15 @@ const ApplicationPost = (props) => {
                     <DragIndicatorIcon fontSize="large"/>
                 </div>
             </div>
+            <div className="application-post-footer-likes">
+                <div>
+                   {likes} likes
+                </div>
+                <div>
+                    {comments} comments
+                </div>
+
+            </div>
             
         </div>
     )
